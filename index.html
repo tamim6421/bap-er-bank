@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bap er Bank</title>
+    
+    <!-- <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" /> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header>
+        <h1 class=" text-2xl md:text-4xl text-center text-red-400 font-semibold uppercase mt-9">welcome to your bap er bank !!!</h1>
+    </header>
+    <main>
+        <section class="bg-red-100 w-3/4 mx-auto mt-10  p-9">
+            <h3 class="text-3xl mb-4 font-medium">Please Login</h3>
+            <div>
+                <input class="w-full md:w-4/12 block mb-3 px-3 py-2" type="email" name="" id="userEmail" placeholder="your email">
+                <input  class="w-full md:w-4/12 block mb-3 px-3 py-2 " type="password" name="" id="userPassword" placeholder="your password">
+                <button id="submitBtn" class="p-2 bg-pink-300 hover:bg-pink-400 rounded-md px-3">Submit</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="login.js"></script>
+    <!-- <script>
+        document.getElementById('submitBtn').addEventListener('click', function(){
+        //    get the email address inside the input fild
+        //  always remember to use .value to get text from input fild
+            const userEmail = document.getElementById('userEmail')
+            const email = userEmail.value;
+            // console.log(email) 
+            // get the password
+            const userPassword = document.getElementById('userPassword')
+            const password = userPassword.value;
+            // console.log(email, password)
+
+            // do not try this this way is not valid
+            // verify email and password
+            if(email === "hablu@gmail.com" && password === "secret"){
+                window.location.href = 'bank.html';
+            }else{
+                alert ('password vule gesis')
+            }
+        })
+    </script> -->
+</body>
+</html>

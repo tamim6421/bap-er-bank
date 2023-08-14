@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Interface</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header>
+        <h1 class="text-4xl text-center text-red-400 font-semibold uppercase mt-9">Lets get some money !!!</h1>
+    </header>
+    <main>
+        <section class="my-12 bg-violet-300 w-3/4 mx-auto">
+            <h1 class="text-center text-4xl my-7 text-white"> my money</h1>
+            <div class="grid gap-3 grid-cols-1 md:grid-cols-3 w-9/12 mx-auto text-white">
+                <div class="bg-green-500 p-8 rounded-lg">
+                    <h3 class="text-2xl">Deposit Money</h3>
+                    <p id="" class="text-5xl">$<span id="depositTotal">00</span> </p>
+                </div>
+
+                <div class="bg-yellow-500 p-8 rounded-lg">
+                    <h3 class="text-2xl">Withdraw</h3>
+                    <p id="" class="text-5xl">$<span id="withdrawTotal">00</span></p>
+                </div>
+
+                <div class="bg-violet-500 p-8 rounded-lg">
+                    <h3 class="text-2xl">Balance</h3>
+                    <p class="text-5xl">$<span id="totalBalance">1200</span></p>
+                </div>
+            </div>
+
+            <div>
+                <div class="grid gap-3 mt-10 grid-cols-1 md:grid-cols-2 w-9/12 mx-auto pb-10">
+                    <div class="bg-fuchsia-500 p-4 md:p-8 rounded-lg">
+
+                        <h3 class="text-2xl mb-4 text-white">Please Deposit</h3>
+
+                        <input class="w-full md:w-9/12 block mb-3 px-3 py-2" type="text" name="" id="DepositField"
+                            placeholder="$ inter amount">
+
+                        <button id="DepositBtn"
+                            class="p-2 bg-blue-700 hover:bg-blue-800 rounded-md px-3 text-white">Deposit</button>
+
+                    </div>
+
+                    <div class="bg-sky-400 p-4 md:p-8  rounded-lg">
+
+                        <h3 class="text-2xl mb-4 text-white"> Please Withdraw</h3>
+
+
+                        <input class="w-full md:w-9/12 block mb-3 px-3 py-2" type="text" name="" id="windowField"
+                            placeholder="$ inter amount">
+
+                        <button id="withdrawBtn"
+                            class="p-2 bg-blue-600 hover:bg-blue-700 rounded-md px-3 text-white">Withdraw</button>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <script src="deposit.js"></script>
+    <!-- <script>
+        document.getElementById('DepositBtn').addEventListener('click', function () {
+            const DepositField = document.getElementById('DepositField')
+            // get the value inside the amount
+            const newDepositAmountString = DepositField.value
+           const newDepositAmount = parseFloat(newDepositAmountString)
+
+           DepositField.value = '';
+           if(isNaN (newDepositAmount)){
+            alert ('please provide a valid number');
+            return;
+           }
+
+
+            // get the current deposit total 
+            const depositTotalElement = document.getElementById('depositTotal')
+            const previousDepositTotalString = depositTotalElement.innerText;
+            const previousDepositTotal = parseFloat(previousDepositTotalString)
+            const currentDepositTotal = previousDepositTotal + newDepositAmount
+            depositTotalElement.innerText = currentDepositTotal;
+
+            // get balance total 
+            const totalBalanceElement = document.getElementById('totalBalance')
+            const preBalanceTotalString = totalBalanceElement.innerText
+            const preTotalBalance = parseFloat(preBalanceTotalString)
+
+            // calculate total balance 
+            const currentBalanceTotal = preTotalBalance + newDepositAmount
+            totalBalanceElement.innerText = currentBalanceTotal
+
+           
+            
+        })
+
+
+        // withdraw js 
+        document.getElementById('withdrawBtn').addEventListener('click', function(){
+           const windowField = document.getElementById('windowField')
+           const newAmountWithdrawStrong = windowField.value
+           const newAmountWithdraw = parseFloat(newAmountWithdrawStrong)
+           windowField.value = '';
+           if(isNaN (newAmountWithdraw)){
+            alert ('please provide a valid number');
+            return;
+           }
+        //    console.log(typeof(newAmountWithdraw))
+
+           const withdrawTotalElement = document.getElementById('withdrawTotal')
+            const previousWithdrawTotalString = withdrawTotalElement.innerText
+            const previousWithdrawTotal = parseFloat(previousWithdrawTotalString)
+            // console.log(previousWithdrawTotal)
+
+           
+
+            windowField.value = '';
+
+
+            const balanceTotalElement = document.getElementById('totalBalance')
+            const previousBalanceTotalString = balanceTotalElement.innerText
+            const previousBalanceTotal = parseFloat (previousBalanceTotalString)
+
+            if(newAmountWithdraw > previousBalanceTotal ){
+                alert ('not enough balance')
+                return;
+            }
+
+            const currentWithdrawTotal = previousWithdrawTotal + newAmountWithdraw ;
+            withdrawTotalElement.innerText = currentWithdrawTotal;
+
+            const balanceTotal = previousBalanceTotal - newAmountWithdraw
+
+            balanceTotalElement.innerText = balanceTotal;
+
+
+
+
+        })
+
+
+
+
+    </script> -->
+</body>
+
+</html>
